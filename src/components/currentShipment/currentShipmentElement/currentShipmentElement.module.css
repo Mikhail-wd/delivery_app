@@ -1,0 +1,107 @@
+.plateElem {
+    height: 72px;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    border-radius: 8px;
+    width: 100%;
+    gap: 18px;
+    box-sizing: border-box;
+}
+
+.currentElement {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    border-radius: 8px;
+    gap: 18px;
+    box-sizing: border-box;
+    background-color: white;
+    border: solid 1px #8a8a8f46;
+}
+
+.plateElem div:nth-child(2) {
+    margin-top: -10px;
+    flex-grow: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow: hidden;    
+}
+
+.title {
+    overflow: hidden;    
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.context {
+    overflow: hidden;    
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+    color: black;
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+.currentElementContext {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0px 12px;
+    margin-top: -24px;
+    padding-bottom: 20px;
+}
+
+.currentElementContext hr {
+    opacity: 0.2;
+}
+
+.pointDestStart,.pointDestEnd {
+    gap: 15px;
+    height: 65px;
+    padding: 0px 2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+}
+.pointDestStart div:nth-child(1),.pointDestEnd div:nth-child(1) {
+   display: flex;
+}
+.pointDestStart div:nth-child(2),.pointDestEnd div:nth-child(2) {
+    overflow: hidden;
+    white-space: nowrap;
+}
+.titleCont {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.content {
+    font-size: 17px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.start {
+    position: relative;
+    top: -7px;
+}
+.line{
+    top: 28px;
+    left:-10px;
+    position: relative;
+    height: 50px;
+    width: 1px
+}

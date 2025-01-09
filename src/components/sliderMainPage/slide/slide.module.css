@@ -1,0 +1,74 @@
+.slider {
+    position: relative;
+    z-index: -1;
+    background-size: 100%;
+    background-clip: clip;
+    background-repeat: no-repeat;
+    background-image: url(../../../assets/img/helphands.jpg);
+    height: 160px;
+    border-radius: 6px;
+}
+
+.textInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 14px 15px;
+    position: absolute;
+    color: white;
+}
+
+.textInfo h4 {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.textInfo p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.textInfo span {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.gradientWrapper {
+    box-sizing: border-box;
+    height: 160px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #08776ed3 0%, #ffffff25 58%);
+}
+
+.saleMark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--main-red);
+    position: absolute;
+    color: white;
+    top: 20px;
+    right: 12px
+}
+.saleMark div {
+    box-sizing: border-box;
+    border: solid 1px white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 72px;
+    height: 72px;
+    line-height: 18px;
+}
+.saleMark div h1{
+    margin-top: 7px;
+    font-size: 25px;
+}

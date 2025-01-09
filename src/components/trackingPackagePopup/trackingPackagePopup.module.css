@@ -1,0 +1,57 @@
+.modalWrapper {
+    z-index: 700;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: fit-content;
+    min-height: 100dvh;
+    position: fixed;
+    overflow-y: scroll;
+    background-color: white
+}
+
+.mainFraim {
+    width: calc(100% - 30px);
+    top: 0;
+    position: absolute;
+    z-index: 800;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    animation: showing 0.3s forwards;
+}
+.inputHeader {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.closeCross {
+    right: 20px;
+    position: absolute;
+    cursor: pointer;
+    width: 33px;
+    height: 33px;
+}
+.currentShippiment {
+    height: 50dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@keyframes showing {
+    0% {
+        opacity: 0.1;
+        top: 250px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+
+}

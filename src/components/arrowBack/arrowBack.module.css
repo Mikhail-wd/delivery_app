@@ -1,0 +1,11 @@
+.mainFrame {
+    margin-top: 5px;
+    padding: 0px 9px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 36px;
+}
+.mainFrame img {
+    height: 22px;
+}

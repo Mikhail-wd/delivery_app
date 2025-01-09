@@ -1,0 +1,28 @@
+.headerWrapper {
+    margin-top: 8px;
+}
+.currentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.currentHeader p {
+    font-weight: 700;
+    font-size: 18px;
+}
+.currentHeader span {
+    opacity: 0.5;
+    font-size: 12px;    
+}
+.currentHeader span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.platesElems {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}

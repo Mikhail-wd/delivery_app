@@ -1,0 +1,60 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: var(--main-green);
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    padding-bottom: 28px !important;
+}
+.headerNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 22px;
+    color: white;
+}
+.header p {
+    margin: 0;
+    padding-top: 8px;
+    font-size: 16px;
+    color: white;
+}
+.navMainPageElem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 74px;
+}
+.navMainPageElem p {
+    text-align: center;
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 13px;
+}
+.headerinput {
+    border-radius: 8px;
+    padding: 16px 12px;
+    padding-left: 36px;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    outline: none;
+    border: none;
+}
+.headerForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.inputWrapperImage {
+    width: 14px;
+    height: 14px;
+    top: 32px;
+    left: 16px;
+    position: relative;
+}

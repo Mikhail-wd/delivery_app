@@ -1,0 +1,183 @@
+@font-face {
+  font-family: Product;
+  src: url(./font/Product/productsans.ttf);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(./font/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(./font/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: Joe;
+  src: url(./font/Josefin/JosefinSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: Vietnam;
+  src: url(./font/Wietnam/BeVietnamPro-Regular.ttf);
+}
+
+:root {
+  background-color: #F9F9F9;
+  font-family: Vietnam, sans-serif;
+  --main-green: #08776E;
+  --main-yellow: #FF9500;
+  --main-grey: #8A8A8F;
+  --main-red: #FF2D55;
+}
+
+#root {
+  width: 100%;
+  max-width: 480px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  padding-bottom: 95px;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.regular-padding {
+  padding: 10px 17px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.btn-regular,
+.btn-regular-alter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  color: white;
+  background-color: var(--main-green);
+  text-align: center;
+  box-sizing: border-box;
+  height: 50px;
+}
+
+.btn-regular {
+  cursor: pointer;
+}
+
+.mobileFrame {
+  display: none;
+}
+
+.regulator {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.regulator h1 {
+  display: block;
+  width: 450px;
+  text-align: center;
+}
+
+.btn-regular:active {
+  transition: 0.2s ease-in-out;
+  transform: scale(0.98);
+}
+
+.btn-medium {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: solid 1px var(--main-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.btn-medium:hover {
+  cursor: pointer;
+  background-color: #7b838228;
+}
+
+.btn-medium:active {
+  transition: 0.2s ease-in-out;
+  transform: scale(0.98);
+}
+
+.icon-box-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #ff950041;
+  background-image: url(./assets/icons/box_icon.svg);
+}
+
+.Toastify__progress-bar--default {
+  background: var(--main-green)
+}
+
+.Toastify__toast {
+  background-color: white;
+  color: black;
+}
+
+.Toastify__toast-container {
+  border-radius: 0;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0px;
+  width: 100% !important;
+}
+
+.Toastify__close-button {
+  display: none !important;
+}
+
+@media screen and (max-width: 485px) {
+  .mobileFrame {
+    display: block;
+  }
+
+  .regulator {
+    display: none;
+  }
+}
