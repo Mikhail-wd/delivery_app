@@ -58,7 +58,7 @@ export default function Root() {
         <>
             <AppContext.Provider value={{ state: state, dispatch: dispatch }}>
                 <div className="regulator">
-                    <h1>You'r resolution isn't supported.</h1>
+                    <h1>You'r resolution isn't supported. Please use mobile device.</h1>
                 </div>
                 <div className="mobileFrame">
                     <ToastContainer
