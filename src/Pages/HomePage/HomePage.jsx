@@ -22,25 +22,32 @@ export default function HomePage() {
     function checkPackage(value) {
         value.preventDefault()
         if (trackNumber !== null) {
-            axios.get(`https://delivery.sjp-asia.group/api/v2/parcel_info/${trackNumber}?language_code=en`)
+            axios.get(`https://delivery.sjp-asia.group/api/v2/parcel_info/${trackNumber.replace(/\s/, "")}?language_code=en`)
                 .then(response => {
                     if (response.data.status === "error") {
                         context.dispatch({ type: "ERROR_POPUP", payload: "Enter valid number" })
+                    } if (response.data.data.fromCountry.length === 0) {
+                        context.dispatch({ type: "ERROR_POPUP", payload: "Please, enter valid tracking number." })
                     } else {
                         context.dispatch({ type: "SET_TRACK_PACKAGE", payload: response.data })
                         context.dispatch({ type: "OPEN_TRACK_MODAL" })
                     }
                 })
                 .catch(error => {
-
+                    if (error.status === 404) {
+                        context.dispatch({ type: "ERROR_POPUP", payload: error.response.data.detail })
+                    } if (error.status === 400)
+                        context.dispatch({ type: "ERROR_POPUP", payload: error.response.data.detail })
                 })
         } else {
-            context.dispatch({ type: "ERROR_POPUP", payload: "Please, enter tracking nymber." })
+            context.dispatch({ type: "ERROR_POPUP", payload: "Please, enter valid tracking number." })
         }
     }
+
     function selectTrack(event) {
         setTrackNumber(event.target.value)
     }
+    
     useLayoutEffect(() => {
         context.dispatch({ type: "CLEAN_CITIES" })
     }, [])

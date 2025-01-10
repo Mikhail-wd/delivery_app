@@ -53,7 +53,7 @@ export default function inputPopup({ select = "cities" }) {
             switch (value) {
                 case "cities":
                     return processedCities.map((element, index) => {
-                        return <span key={index} className={classes.modalElement} onClick={() => { selectCity(element) }}>{element.city}</span>
+                        return <span key={index} className={classes.modalElement} onClick={() => { selectCity(element) }}>{element.city} {`(${element.country})`}</span>
                     })
                 default:
                     console.warn("No selectors for RateModale")

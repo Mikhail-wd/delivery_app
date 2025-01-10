@@ -33,11 +33,11 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 .title {
-    overflow: hidden;    
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     font-weight: 600;
@@ -45,7 +45,7 @@
 }
 
 .context {
-    overflow: hidden;    
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     font-weight: 600;
@@ -60,48 +60,105 @@
     padding: 0px 12px;
     margin-top: -24px;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px
+}
+
+.leftColIcons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightColContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .currentElementContext hr {
     opacity: 0.2;
 }
 
-.pointDestStart,.pointDestEnd {
+.pointDestStart,
+.pointDestEnd {
     gap: 15px;
-    height: 65px;
     padding: 0px 2px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: start;
-    align-items: center;
 }
-.pointDestStart div:nth-child(1),.pointDestEnd div:nth-child(1) {
-   display: flex;
+
+.pointDestStart div:nth-child(1),
+.pointDestEnd div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
 }
-.pointDestStart div:nth-child(2),.pointDestEnd div:nth-child(2) {
+
+.pointDestStart div:nth-child(2),
+.pointDestEnd div:nth-child(2) {
     overflow: hidden;
     white-space: nowrap;
+}
+.rightColContent {
+    overflow: hidden;
 }
 .titleCont {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 .content {
     font-size: 17px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+.end {
+    margin-bottom: 10px;
+}
 .start {
     position: relative;
-    top: -7px;
+    margin-top: 10px;
 }
-.line{
-    top: 28px;
-    left:-10px;
-    position: relative;
-    height: 50px;
-    width: 1px
+
+.line {
+    flex-grow: 10;
+    border-left: dashed 1px black;
+}
+
+.listWrapper {
+    margin: 0;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.dateForming {
+    font-size: 11px;
+}
+
+.listWrapper li {
+    margin-left: 3px;
+    list-style: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+}
+.formFooter {
+    margin-top: -40px;
+    box-sizing: border-box;
+    width: 100%;
 }

@@ -94,6 +94,7 @@ a p {
 }
 
 .mobileFrame {
+  padding-bottom: 80px;
   display: none;
 }
 

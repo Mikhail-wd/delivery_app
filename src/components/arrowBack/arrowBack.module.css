@@ -6,6 +6,14 @@
     align-items: center;
     height: 36px;
 }
+
 .mainFrame img {
     height: 22px;
+}
+
+.backWrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
 }

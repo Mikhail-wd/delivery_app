@@ -12,6 +12,7 @@ import InputPopup from "../../components/inputPopup/inputPopup"
 import axios from "axios"
 import axiosRetry from "axios-retry"
 import { AppContext } from "../../routes/Root"
+import MainSwiper from "../../components/sliderMainPage/swiperMain"
 import { useLayoutEffect, useState, useRef, useContext } from "react"
 
 export default function CheckRatesPage() {
@@ -50,7 +51,6 @@ export default function CheckRatesPage() {
             setSelectKilos(51);
         }
     }
-
     function setWeigth(value) {
         if (value <= 4) {
             setSelectedWeight("medium")
@@ -60,7 +60,6 @@ export default function CheckRatesPage() {
             setSelectedWeight("huge")
         }
     }
-
     function selectingWeight(value) {
         if (value === "dec" && selectKilos > 1) {
             setWeigth(selectKilos - 1)
@@ -95,9 +94,12 @@ export default function CheckRatesPage() {
         setMatchetCitiesStart([])
     }
     function selectPickUp(value) {
+        setButtonState(0)
         setPickCountry(value.target.value)
     }
     function openModalCities() {
+        setButtonState(0)
+        city.current.blur()
         context.dispatch({ type: "TOGGLE_CITIESMODAL" })
     }
 
@@ -109,6 +111,7 @@ export default function CheckRatesPage() {
                     setCalcPrice(response.data.cost)
                     setButtonState(2)
                 }).catch(error => {
+
                     context.dispatch({ type: "ERROR_POPUP", payload: error.response.data.detail })
                     setButtonState(0)
                 }
@@ -139,9 +142,8 @@ export default function CheckRatesPage() {
     }, [context.state.checkRates.selectedCity])
     return (
         <>
-            <ArrowBack target={"/delivery_app/"} />
+            <ArrowBack target={"/delivery_app/"} name={"Check Rates"} />
             {context.state.checkRates.modalCities ? < InputPopup select="cities" /> : null}
-            <h1 className={classes.title + ' regular-padding'}>Check Rates</h1>
             <div className={classes.points + ' regular-padding'}>
                 <div className={classes.pickPoint}>
                     <p className={classes.titleChek}>Pickup Point</p>
@@ -211,6 +213,7 @@ export default function CheckRatesPage() {
                     </div>
                 </div>
             </div>
+            <MainSwiper />
             {switchButtons()}
         </>
     )

@@ -2,10 +2,10 @@
     z-index: 700;
     top: 0;
     left: 0;
-    width: 100dvw;
-    height: 100dvh;
-    position: fixed;
-    overflow-y: scroll;
+width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+  overflow-y: scroll;
     background-color: white
 }
 
@@ -20,7 +20,7 @@
     animation: showing 0.3s forwards;
 }
 .inputHeader {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     gap: 20px;
     flex-direction: row;
@@ -37,10 +37,10 @@
     height: 33px;
 }
 .currentShippiment {
-    height: 50dvh;
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
 }
 @keyframes showing {
     0% {

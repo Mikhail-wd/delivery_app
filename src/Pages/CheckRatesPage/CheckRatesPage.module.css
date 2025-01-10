@@ -3,8 +3,13 @@
 }
 
 .footer {
-    margin-top:90px;
-    width: calc(100% - 34px);
+    z-index: 300;
+    position: fixed;
+    bottom: 20px;
+    width: calc(100% - 34px);    
+}
+.footer div {
+    box-shadow: 2px 2px  10px black;
 }
 
 .inputCheck {
