@@ -63,7 +63,7 @@ export default function CurrentShipmentElement() {
                         <div>
                             <p className={classes.titleCont}>Shippet to</p>
                             <p className={classes.content}>
-                                {context.state.package.data.destinationPostalAddress} </p>
+                                {context.state.package.data.destinationCountry	} </p>
                         </div>
                     </div>
                 </div>
