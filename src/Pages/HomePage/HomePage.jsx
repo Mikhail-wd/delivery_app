@@ -12,10 +12,11 @@ import Footer from '../../components/footer/footer'
 import axios from "axios"
 import axiosRetry from "axios-retry"
 import { AppContext } from '../../routes/Root'
-import { useContext, useLayoutEffect, useState } from 'react'
+import { useContext, useLayoutEffect, useState, useRef } from 'react'
 import TrackingPackagePopup from '../../components/trackingPackagePopup/trackingPackagePopup'
 
 export default function HomePage() {
+    const input = useRef()
     const context = useContext(AppContext)
     const [trackNumber, setTrackNumber] = useState(null)
 
@@ -29,6 +30,7 @@ export default function HomePage() {
                     } if (response.data.data.fromCountry.length === 0) {
                         context.dispatch({ type: "ERROR_POPUP", payload: "Please, enter valid tracking number." })
                     } else {
+                        input.current.blur()
                         context.dispatch({ type: "SET_TRACK_PACKAGE", payload: response.data })
                         context.dispatch({ type: "OPEN_TRACK_MODAL" })
                     }
@@ -47,7 +49,7 @@ export default function HomePage() {
     function selectTrack(event) {
         setTrackNumber(event.target.value)
     }
-    
+
     useLayoutEffect(() => {
         context.dispatch({ type: "CLEAN_CITIES" })
     }, [])
@@ -61,6 +63,7 @@ export default function HomePage() {
                     <form action="submit" className={classes.headerForm} onSubmit={(e) => checkPackage(e)}>
                         <img src={search} alt="search" className={classes.inputWrapperImage} />
                         <input type="text" className={classes.headerinput}
+                            ref={input}
                             placeholder='Enter tracking number'
                             onChange={(e) => selectTrack(e)} />
                     </form>
