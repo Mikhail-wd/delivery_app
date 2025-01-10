@@ -45,7 +45,7 @@ export default function HomePage() {
         context.dispatch({ type: "CLEAN_CITIES" })
     }, [])
     return (
-        <>
+        <div className={classes.mainWrapper}>
             {context.state.track_modal ? <TrackingPackagePopup /> : null}
             <header className={classes.header + " regular-padding"}>
                 <h1>Let's track your package</h1>
@@ -60,7 +60,7 @@ export default function HomePage() {
                 </div>
             </header>
             <nav className={classes.headerNav + " regular-padding"}>
-                <Link className={classes.navMainPageElem} to="/check_rates">
+                <Link className={classes.navMainPageElem} to="/delivery_app/check_rates">
                     <div className='btn-medium'>
                         <img src={hand} alt="payment" />
                     </div>
@@ -88,6 +88,6 @@ export default function HomePage() {
             <HistoryPlate />
             <MainSwiper />
             <Footer />
-        </>
+        </div >
     )
 }

@@ -8,15 +8,15 @@ import './index.css'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/delivery_app/",
     element: <Root />,
     children: [
       {
         index: true,
-        path: "/",
+        path: "/delivery_app/",
         element: <HomePage />
       }, {
-        path: "/check_rates",
+        path: "/delivery_app/check_rates",
         element: <CheckRatesPage />
       }
     ]

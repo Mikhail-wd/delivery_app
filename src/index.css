@@ -46,7 +46,6 @@ body {
   margin: 0;
   overflow-x: hidden;
   scrollbar-width: thin;
-  padding-bottom: 95px;
 }
 
 input {
@@ -72,9 +71,11 @@ a {
 }
 
 a:visited {
-  color: inherit;
+  color: black;
 }
-
+a p {
+  color: black;
+}
 .btn-regular,
 .btn-regular-alter {
   display: flex;

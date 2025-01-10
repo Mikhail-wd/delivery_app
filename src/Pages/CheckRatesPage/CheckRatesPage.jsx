@@ -139,7 +139,7 @@ export default function CheckRatesPage() {
     }, [context.state.checkRates.selectedCity])
     return (
         <>
-            <ArrowBack target={"/"} />
+            <ArrowBack target={"/delivery_app/"} />
             {context.state.checkRates.modalCities ? < InputPopup select="cities" /> : null}
             <h1 className={classes.title + ' regular-padding'}>Check Rates</h1>
             <div className={classes.points + ' regular-padding'}>
@@ -169,7 +169,7 @@ export default function CheckRatesPage() {
                             <input type="text" className={classes.inputCheck}
                                 placeholder='Package Destination'
                                 ref={city}
-                                onFocus={() => { openModalCities() }}
+                                onClick={() => { openModalCities() }}
                             />
                             <img src={gps} alt="gps" className={classes.iconGps} />
                         </div>

@@ -17,7 +17,7 @@ export default function Footer() {
                     <img src={home_active} alt="icon" />
                     <p>Home</p>
                 </div>
-                <Link className={classes.footerPassivElem} to="/check_rates">
+                <Link className={classes.footerPassivElem} to="/delivery_app/check_rates">
                     <img src={list} alt="icon" />
                     <p>Check Rates</p>
                 </Link>

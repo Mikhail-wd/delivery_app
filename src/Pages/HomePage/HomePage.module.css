@@ -12,6 +12,9 @@
     flex-direction: row;
     justify-content: space-between;
 }
+.mainWrapper {
+    padding-bottom: 90px;
+}
 .header h1 {
     margin: 0;
     font-weight: 600;

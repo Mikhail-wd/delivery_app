@@ -35,12 +35,13 @@ export default function inputPopup({ select = "cities" }) {
         }
     }
     function choseCountry(value) {
-        let formatedInput = value.target.value.length > 0 ? value.target.value[0].toUpperCase() + value.target.value.slice(1) : value.target.value
+        let formatedInput = value.target.value.toLowerCase().replace(/\s/, "")
         let tempArray = []
         if (value.target.value.length > 0) {
             input.current.value = value.target.value[0].toUpperCase() + value.target.value.slice(1)
             for (let element in cities) {
-                if (cities[element].tag.match(`${formatedInput}`) !== null && input.current.value.length !== 0) {
+                let formatedTag = cities[element].tag.toLowerCase().replace(/\s/, "")
+                if (formatedTag.match(`${formatedInput}`) !== null && input.current.value.length !== 0) {
                     tempArray.push({ city: element, country: cities[element].country })
                 }
             }
@@ -66,9 +67,7 @@ export default function inputPopup({ select = "cities" }) {
         setCountris(context.state.checkRates.countris)
     }, [])
     return (
-        <>
-            <div className={classes.modalWrapper}>
-            </div>
+        <div className={classes.modalWrapper}>
             <div className={classes.mainFraim + " regular-padding"}>
                 <span className={classes.inputHeader}>
                     <input type="text" className={classes.inputCheck}
@@ -82,6 +81,6 @@ export default function inputPopup({ select = "cities" }) {
                     {switchSelector(select)}
                 </div>
             </div>
-        </>
-    )
+
+        </div>)
 }
