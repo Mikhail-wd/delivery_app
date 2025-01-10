@@ -3,8 +3,7 @@
     top: 0;
     left: 0;
     width: 100dvw;
-    height: fit-content;
-    min-height: 100dvh;
+    height: 100dvh;
     position: fixed;
     overflow-y: scroll;
     background-color: white
