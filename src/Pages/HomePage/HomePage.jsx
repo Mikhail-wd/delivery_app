@@ -64,7 +64,7 @@ export default function HomePage() {
                         <img src={search} alt="search" className={classes.inputWrapperImage} />
                         <input type="text" className={classes.headerinput}
                             ref={input}
-                            placeholder='Enter tracking number'
+                            placeholder='Example: CY287159955DE'
                             onChange={(e) => selectTrack(e)} />
                     </form>
                 </div>
@@ -80,7 +80,7 @@ export default function HomePage() {
                     <div className='btn-medium'>
                         <img src={truck} alt="payment" />
                     </div>
-                    <p>Pick Up</p>
+                    <p>Add Shipment</p>
                 </div>
                 <div className={classes.navMainPageElem} onClick={() => { context.dispatch({ type: "ERROR_POPUP", payload: "Page is under service" }) }}>
                     <div className='btn-medium'>

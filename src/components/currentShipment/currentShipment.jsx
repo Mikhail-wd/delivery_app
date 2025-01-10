@@ -15,7 +15,7 @@ const mockArr = [
 
 export default function CurrentShipment() {
     return (
-        <div className={classes.headerWrapper + " regular-padding"}>
+        <div className={classes.headerWrapper }>
             <div className={classes.currentHeader}>
                 {/* <p>Current Shipment</p>
                 <span>See all <img src={arrow} alt="icon" /></span> */}
