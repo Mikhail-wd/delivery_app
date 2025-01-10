@@ -17,6 +17,7 @@ export default function inputPopup({ select = "cities" }) {
         } if (select === "countris") {
             context.dispatch({ type: "TOGGLE_COUNTRISMODAL" })
         }
+        input.current.blur()
     }
     function selectCity(value) {
         context.dispatch({ type: "SELECT_CITY", payload: value })
