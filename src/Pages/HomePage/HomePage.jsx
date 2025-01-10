@@ -23,7 +23,7 @@ export default function HomePage() {
     function checkPackage(value) {
         value.preventDefault()
         if (trackNumber !== null) {
-            axios.get(`https://delivery.sjp-asia.group/api/v2/parcel_info/${trackNumber.replace(/\s/, "")}?language_code=en`)
+            axios.get(`https://delivery.sjp-asia.group/api/v2/parcel_info/${trackNumber.replace(/\s/, "").toUpperCase()}?language_code=en`)
                 .then(response => {
                     if (response.data.status === "error") {
                         context.dispatch({ type: "ERROR_POPUP", payload: "Enter valid number" })
